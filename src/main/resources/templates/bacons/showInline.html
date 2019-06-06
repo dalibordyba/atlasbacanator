@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" data-layout-decorate="~{layouts/default-list-layout}">
+    <head id="head">
+
+    <title data-th-text="|#{label_show_entity(#{label_bacon})}|">Show Bacon - Spring Roo application</title>
+
+  </head>
+
+  <body id="body">
+
+    <header role="banner">
+      <!-- Content replaced by layout of the page displayed -->
+    </header>
+
+    <!--CONTAINER-->
+    <div class="container bg-container">
+      <!-- CONTENT -->
+      <!--
+        Only the inner content of the following tag "section" is included
+        within the template, in the section "content"
+      -->
+      <section data-th-fragment="inline-content" data-layout-fragment="content" data-th-object="${bacon}">
+        <div>
+
+          <!-- CONTENT -->
+            <div id="mainEntityFieldSet">
+              <ul class="list-unstyled" id="containerFields">
+                  <li id="bacon-start-field" data-z="d4277666">
+            	      <strong data-th-text="#{label_bacon_start}">start</strong>
+                    <span data-th-text="*{{start}}">startValue</span>
+         	        </li>
+                  <li id="bacon-end-field" data-z="daebb106">
+            	      <strong data-th-text="#{label_bacon_end}">end</strong>
+                    <span data-th-text="*{{end}}">endValue</span>
+         	        </li>
+                  <li id="bacon-data-field" data-z="8005bbf8">
+            	      <strong data-th-text="#{label_bacon_data}">data</strong>
+                    <span data-th-text="*{{data}}">dataValue</span>
+         	        </li>
+                  <li id="bacon-response-field" data-z="af1b7098">
+            	      <strong data-th-text="#{label_bacon_response}">response</strong>
+                    <span data-th-text="*{{response}}">responseValue</span>
+         	        </li>
+              </ul>
+            </div>
+
+        </div>
+
+      </section>
+      <!-- /CONTENT -->
+  </div>
+  <!-- /CONTAINER -->
+
+  <footer class="container">
+    <!-- Content replaced by layout of the page displayed -->
+  </footer>
+
+  <!-- JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so that the pages load faster -->
+  <!-- JavaScript loaded by layout of the page displayed -->
+  <!--
+       Only the inner content of the following tag "javascript" is included
+       within the template, in the div "javascript"
+      -->
+  <div data-layout-fragment="javascript">
+  </div>
+
+  </body>
+
+</html>

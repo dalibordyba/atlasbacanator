@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" data-layout-decorate="~{layouts/default-list-layout}">
+  <head id="head">
+
+    <title data-th-text="|#{label_show_entity(#{label_response})}|">Show Response - Spring Roo application</title>
+
+  </head>
+
+  <body id="body">
+
+    <header role="banner">
+      <!-- Content replaced by layout of the page displayed -->
+    </header>
+
+    <!--CONTAINER-->
+    <div class="container bg-container">
+      <!-- CONTENT -->
+      <!--
+        Only the inner content of the following tag "section" is included
+        within the template, in the section "content"
+      -->
+      <section data-layout-fragment="content" data-th-object="${response}">
+        <div class="container-fluid content">
+
+          <!-- CONTENT -->
+          <h1 data-th-text="#{label_show_entity(#{label_response})}">Show Response</h1>
+
+            <div id="mainEntityFieldSet">
+              <h2 data-th-text="#{label_data_entity(#{label_response})}">Response data</h2>
+              <ul class="list-unstyled" id="containerFields">
+              	   <li id="response-host-field" data-z="1e6bde8c">
+            	      <strong data-th-text="#{label_response_client}">host</strong>
+                    <span data-th-text="*{{client}}">clientIP</span>
+         	        </li>	
+                  <li id="response-duration-field" data-z="1e6bde8c">
+            	      <strong data-th-text="#{label_response_duration}">duration</strong>
+                    <span data-th-text="*{{duration}}">durationValue</span>
+         	        </li>
+                  <li id="response-start-field" data-z="d5acaa92">
+            	      <strong data-th-text="#{label_response_start}">start</strong>
+                    <span data-th-text="*{{start}}">startValue</span>
+         	        </li>
+                  <li id="response-end-field" data-z="42480032">
+            	      <strong data-th-text="#{label_response_end}">end</strong>
+                    <span data-th-text="*{{end}}">endValue</span>
+         	        </li>
+         	  		
+         	       
+         	       <!-- <li th:each="item:${{items}}">
+            	      <strong data-th-text="#{label_response_items}">bacons</strong>
+            	      <span data-th-text="*{item}">baconValue</span>
+         	        </li>   -->
+         	        
+              </ul>
+              
+         	  <table style="width: 99.7%" class="table table-striped table-hover table-bordered" data-datatables="false">
+         	      <thead>
+         	        <tr>
+	         	        <th data-data="id" data-th-text="#{label_bacon_id}"></th>
+	                    <th data-data="start" data-th-text="#{label_bacon_start}">start</th>
+	                    <th data-data="end" data-th-text="#{label_bacon_end}">end</th>
+	                    <th data-data="duration" data-th-text="#{label_bacon_duration}">duration</th>
+	                    <th data-data="data" data-th-text="#{label_bacon_data}">data</th>
+                 	</tr>  
+              	  </thead>
+              	  
+	              <tbody>
+	               	<tr th:each="bacon:${response.items}">
+	                    <td data-th-text="${bacon.id}">id</td>
+	                    <td data-th-text="${bacon.start}">start</td>
+	                    <td data-th-text="${bacon.end}">start</td>
+	                    <td data-th-text="${bacon.duration}">duration</td>
+	                    <td data-th-text="${bacon.data}"> data</td>
+	                  </tr>
+	              </tbody>
+              </table>
+              
+				    
+            </div>
+
+
+          <div class="clearfix">
+            <div class="pull-left">
+              <a id="Response_list" href="list.html" class="btn btn-default" data-th-title="#{label_goBack}" data-th-href="${@linkBuilder.of('ResponsesCollectionThymeleafController').to('list')}">
+  	             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+  	             <span data-th-text="#{label_back}">Back</span>
+  	          </a>
+            </div>
+          </div>
+        </div>
+
+      </section>
+      <!-- /CONTENT -->
+  </div>
+  <!-- /CONTAINER -->
+
+  <footer class="container">
+    <!-- Content replaced by layout of the page displayed -->
+  </footer>
+
+  <!-- JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so that the pages load faster -->
+  <!-- JavaScript loaded by layout of the page displayed -->
+  <!--
+       Only the inner content of the following tag "javascript" is included
+       within the template, in the div "javascript"
+      -->
+  <div data-layout-fragment="javascript">
+  </div>
+
+  </body>
+
+</html>

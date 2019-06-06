@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" data-layout-decorate="~{layouts/home-layout}">
+    <head id="head">
+
+    <title data-th-text="#{welcome_label}">Welcome to Atlas Baconator</title>
+
+  </head>
+
+  <body class="home" id="body">
+
+    <header role="banner">
+      <!-- Content replaced by layout of the page displayed -->
+    </header>
+
+      <!-- CONTAINER -->
+      <div class="container bg-container">
+        <!-- CONTENT -->
+        <!--
+          Only the inner content of the following tag "section" is included
+          within the template, in the section "content"
+        -->
+        <section data-layout-fragment="content">
+       	 <div data-th-replace="~{fragments/modal-give-bacons :: dialog-bacons}"></div>
+          <div class="container-fluid content">
+
+            <div class="box-center">
+              <!-- Project info -->
+              <div class="row">
+               
+                <div class="col-sm-6">
+                  <h3 data-th-text="#{info_homepage_header}">With Baconator you can easily get something to eat.</h3>
+                  
+                  <button onclick="$('#dialog-bacons').modal('show');">
+                  		<img title="Get something to eat" alt="Get something to eat" src="/public/img/load_data.png">
+   
+					</button>
+                </div>
+              </div>
+            </div><!-- box-center -->
+
+          </div>
+        </section>
+        <!-- /CONTENT -->
+      </div>
+      <!-- /CONTAINER -->
+
+      <footer class="container">
+        <!-- Content replaced by layout of the page displayed -->
+      </footer>
+
+      <!-- JavaScript
+      ================================================== -->
+      <!-- Placed at the end of the document so that the pages load faster -->
+      <!-- JavaScript loaded by layout of the page displayed -->
+      <!--
+           Only the inner content of the following tag "javascript" is included
+           within the template, in the div "javascript"
+          -->
+      <div data-layout-fragment="javascript">
+      	
+      </div>
+
+  </body>
+
+</html>

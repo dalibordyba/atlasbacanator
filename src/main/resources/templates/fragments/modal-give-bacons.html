@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Modal</title>
+</head>
+<body id="body">
+	<!--
+    Only the inner content of the following div is included within the
+    template, in the section modal
+    -->
+	<div class="modal fade" id="dialog-bacons"	data-th-fragment="dialog-bacons">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header" id="ModalHeader" data-th-id="Header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times</span>
+					</button>
+					<h2 class="modal-title" id="ModalLabel" data-th-id="Label">How many bacons you want?
+						</h2>
+				</div>
+				<div class="modal-body" id="ModalBody" data-th-id="Body">
+					<div class="panel-body">
+						<form id="form_bacons" action="/responses" method="post"	enctype="multipart/form-data">
+<!-- 						<form id="bacons_form" action="/responses/create" method="post"	enctype="multipart/form-data"> -->
+							<label for="count" class="col-md-3 control-label" >bacons count</label>
+							<input type="text" id="bacons_count" name = "count" placeholder="how many bacons"/>
+							<input type="submit" class="btn btn-primary"  value="Get bacons" />
+<!-- 							<input type="submit" class="btn btn-primary" onclick="getBacons();" value="Upload File" /> -->
+						</form>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
